@@ -33,9 +33,22 @@ class _Test1State extends State<Test1> with SingleTickerProviderStateMixin {
             Expanded(
               child: TabBarView(
                 children: [
-                  _buildArray(data: kota, reverse: true),
-                  _buildArray(data: kota, reverse: false),
-                  _buildArray(data: kota, reverse: false),
+                  _buildArray(data: kota.reversed.toList(), reverse: false),
+                  _buildArray(
+                    data:
+                        kota
+                            .where((e) => e.toUpperCase().contains('KOTA'))
+                            .toList(),
+                    reverse: false,
+                  ),
+                  _buildArray(
+                    data:
+                        kota
+                            .where((e) => e.toUpperCase().contains('KAB'))
+                            .toList(),
+
+                    reverse: false,
+                  ),
                 ],
               ),
             ),

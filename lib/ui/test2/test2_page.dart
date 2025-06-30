@@ -44,7 +44,7 @@ class _Test2PageState extends State<Test2Page> {
           // title: 'Berhasil',
           message: 'Hello World!',
           onTapButton: () async {
-            // context.pop();
+            Navigator.pop(context);
           },
         );
       },
